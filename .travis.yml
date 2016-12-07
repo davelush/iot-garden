@@ -4,6 +4,7 @@ language: java
 sudo: required
 
 #install apt packages
+
 addons:
   apt:
     packages:
@@ -13,6 +14,9 @@ addons:
 install:
   # Install ansible
   - sudo pip install ansible
+
+  # Touch the hosts file
+  - sudo touch /etc/ansible/hosts
 
   # Check ansible version
   - ansible --version
