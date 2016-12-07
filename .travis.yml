@@ -17,7 +17,7 @@ install:
 
   # Adding an /etc/ansible/hosts
   - sudo mkdir /etc/ansible
-  - sudo printf '[local]\nlocalhost\n\n[webserver]'>/etc/ansible/hosts
+  - printf '[local]\nlocalhost\n\n[webserver]'>/etc/ansible/hosts
 
   # Check ansible version
   - ansible --version
