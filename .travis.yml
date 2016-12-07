@@ -7,4 +7,4 @@ branches:
 
 notifications:
   email:
-  - dave@digitalsandpit.io
+  - ci.notifications@digitalsandpit.io
