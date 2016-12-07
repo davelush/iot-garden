@@ -17,6 +17,8 @@
 
     <modules>
         <module>api-server</module>
+        <module>ansible</module>
     </modules>
+
 
 </project>
