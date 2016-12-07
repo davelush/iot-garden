@@ -1,0 +1,10 @@
+---
+language: java
+
+branches:
+  only:
+  - master
+
+notifications:
+  email:
+  - cukes-devs@googlegroups.com
