@@ -1,5 +1,7 @@
 # Dave's Veggie Patch
 
+[![Build Status](https://travis-ci.org/davelush/iot-garden.svg?branch=master)](https://travis-ci.org/davelush/iot-garden) 
+
 ![alt tag](https://davessr2roadrunnerbuild.files.wordpress.com/2016/10/20160902_1700161.jpg)
 
 This is my back garden after spending a year and a half landscaping it. This project will put a cheap solar panel and a small IoT device up on the shed roof plus a data-logging server provisioned in AWS. The device will (hopefully) use my domestic wi-fi to connect off to the Internet. There will then be a waterbutt to the right of the shed (where the blue bucket is) that will be fed from guttering down the back of the shed. The device will then control a gravity fed sprinkler for the three vegetable patches. 
