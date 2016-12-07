@@ -1,8 +1,28 @@
 ---
 language: java
 
+# use container infrastructure
+sudo: false
+
+#install apt packages
+addons:
+  apt:
+    packages:
+      - python-pip
+
+# install some more stuff
+install:
+  # Install ansible
+  - pip install ansible
+
+  # Check ansible version
+  - ansible --version
+
+  # Create ansible.cfg with correct roles_path
+  - printf '[defaults]\nroles_path=../' >ansible.cfg
+
 script:
-  - mvn clean install -e
+  - mvn clean install -e -Dmaven.javadoc.skip=true
 
 branches:
   only:
