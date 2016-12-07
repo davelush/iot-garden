@@ -15,7 +15,8 @@ install:
   # Install ansible
   - sudo pip install ansible
 
-  # Touch the hosts file
+  # Adding an ansible dir and touching hosts
+  - sudo mkdir /etc/ansible
   - sudo touch /etc/ansible/hosts
 
   # Check ansible version
