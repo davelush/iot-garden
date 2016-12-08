@@ -17,6 +17,7 @@
     <properties>
         <ansible.playbook>ansible/ec2_launch.yml</ansible.playbook>
         <ansible.promoteDebugAsInfo>true</ansible.promoteDebugAsInfo>
+        <ansible.inventory>ansible/hosts</ansible.inventory>
         <!--<ansible.syntaxCheck>true</ansible.syntaxCheck>-->
     </properties>
 
