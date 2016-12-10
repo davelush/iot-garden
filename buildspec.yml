@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - echo beginning build phase
+      - mvn clean install -e
+
+artifacts:
+  files:
+    - api-server/target/api-server-1.0-SNAPSHOT.jar
+discard-paths: yes
