@@ -16,7 +16,7 @@
     </parent>
 
     <modules>
-        <module>api-server</module>
+        <module>photon-service</module>
         <!-- <module>ansible</module> -->
     </modules>
 
