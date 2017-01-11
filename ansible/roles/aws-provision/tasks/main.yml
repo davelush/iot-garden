@@ -43,7 +43,7 @@
 
   - name: Add the EC2 instances to the local /.hosts file
     lineinfile:
-      dest: "inventory/hosts"
+      dest: "hosts"
       insertafter: "[webservers]"
       line: "{{ elastic_ip }}"
     with_items: "{{ ec2.instances }}"

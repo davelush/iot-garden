@@ -6,6 +6,7 @@
     roles:
       - aws-provision
 
-#  - hosts: webservers
-#    roles:
-#      - photon-service
+  - hosts: webservers
+    user: ec2-user
+    roles:
+      - photon-service
