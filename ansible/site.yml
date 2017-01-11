@@ -1,0 +1,11 @@
+---
+# file site.yml
+  - hosts: localhost
+    connection: local
+    gather_facts: False
+    roles:
+      - aws-provision
+
+#  - hosts: webservers
+#    roles:
+#      - photon-service

@@ -1,0 +1,6 @@
+---
+# file: roles/photon-service/tasks/main.yml
+
+  - copy:
+      src: photon-service/target/photon-service-1.0-SNAPSHOT.jar
+      dest: /etc/photon-service.jar

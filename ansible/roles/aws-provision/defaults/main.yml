@@ -1,0 +1,9 @@
+---
+#file: roles/photon-service/defaults/main.yml
+  instance_type: t2.micro
+  security_group: AppServerGroup  # Change based on your default app server security group
+  image: ami-9398d3e0             # Amazon Linux AMI 2016.09.0 (HVM), SSD Volume Type
+  region: eu-west-1               # Ireland
+  keypair: ansible                # Change based on the keypair you're using
+  count: 1                        # Only want one EC2 instance
+  elastic_ip: 52.213.130.123      # This shouldn't really be hard-coded but is currently associated with garden.digitalsandpit.io via route53
