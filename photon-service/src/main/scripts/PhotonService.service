@@ -1,0 +1,8 @@
+[Unit]
+Description=Photon Service
+[Service]
+ExecStart=/home/ec2-user/runPhotonService.sh
+Type=simple
+User=ec2-user
+[Install]
+WantedBy=multi-user.target
