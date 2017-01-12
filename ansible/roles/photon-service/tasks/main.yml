@@ -40,6 +40,7 @@
     service:
       name: PhotonService
       state: stopped
+    become: true
 
   - name: Start it back up again
     service:
