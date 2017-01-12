@@ -1,4 +1,4 @@
-package org.digitalsandpit.garden.model;
+package io.digitalsandpit.garden.model;
 
 public class Battery {
     private double chargeLevel = 0.0;

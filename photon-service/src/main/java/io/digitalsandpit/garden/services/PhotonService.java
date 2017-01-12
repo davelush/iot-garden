@@ -1,7 +1,8 @@
-package org.digitalsandpit.garden.services;
+package io.digitalsandpit.garden.services;
 
+import io.digitalsandpit.garden.model.Device;
 import lombok.extern.slf4j.Slf4j;
-import org.digitalsandpit.garden.model.Battery;
+import io.digitalsandpit.garden.model.Battery;
 
 @Slf4j
 public class PhotonService implements Device {

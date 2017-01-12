@@ -1,9 +1,7 @@
-package org.digitalsandpit.garden.controllers;
+package io.digitalsandpit.garden.controllers;
 
-import lombok.extern.slf4j.Slf4j;
-import org.digitalsandpit.garden.model.Battery;
-import org.digitalsandpit.garden.services.Device;
-import org.digitalsandpit.garden.services.PhotonService;
+import io.digitalsandpit.garden.model.Battery;
+import io.digitalsandpit.garden.model.Device;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

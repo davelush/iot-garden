@@ -1,4 +1,4 @@
-package org.digitalsandpit.garden.services;
+package io.digitalsandpit.garden.services;
 
 public class EnvironmentService {
     private double airTemperature;
