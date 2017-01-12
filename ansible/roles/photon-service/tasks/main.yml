@@ -1,7 +1,48 @@
 ---
 # file: roles/photon-service/tasks/main.yml
 
-  - copy:
+#  - name: Install the java 8 jre (DOESN'T WORK BECAUSE OF ELASTIC IP)
+#    yum:
+#      name: java-1.8.0-openjdk
+#      state: present
+#    become: true
+
+  - name: Copies the systemd service wrapper
+    copy:
+      src: ../photon-service/src/main/scripts/PhotonService.service
+      dest: /usr/lib/systemd/system
+      mode: 0544
+    become: true
+
+  - name: Copies the shell script to run the jar
+    copy:
+      src: ../photon-service/src/main/scripts/runPhotonService.sh
+      dest: /home/ec2-user/runPhotonService.sh
+      mode: 0544
+
+  - name: Copies the jar file across to ec2-user's home
+    copy:
       src: ../photon-service/target/photon-service-1.0-SNAPSHOT.jar
-      dest: /etc/photon-service.jar
+      dest: /home/ec2-user/photon-service-.jar
+
+  - name: Unlink the current app
+    file:
+      path: /home/ec2-user/photon-service.jar
+      state: absent
+
+  - name: Link the new version of the app
+    file:
+      path: /home/ec2-user/photon-service.jar
+      src: /home/ec2-user/photon-service-.jar
+      state: link
+
+  - name: Stop the app from running
+    service:
+      name: PhotonService
+      state: stopped
+
+  - name: Start it back up again
+    service:
+      name: PhotonService
+      state: started
     become: true
