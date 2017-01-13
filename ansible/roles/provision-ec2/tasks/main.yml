@@ -1,5 +1,5 @@
 ---
-# file: roles/photon-service/tasks/main.yml
+# file: roles/provision-ec2/tasks/main.yml
 
   - name: Create a security group
     ec2_group:
