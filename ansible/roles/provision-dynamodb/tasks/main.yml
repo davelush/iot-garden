@@ -1,0 +1,13 @@
+---
+# file: roles/provision-dynamodb/tasks/main.yml
+
+  # Create dynamo table with hash and range primary key
+  - dynamodb_table:
+      name: my-table
+      region: "{{ region }}"
+      hash_key_name: id
+      hash_key_type: STRING
+      range_key_name: create_time
+      range_key_type: NUMBER
+      read_capacity: 2
+      write_capacity: 2

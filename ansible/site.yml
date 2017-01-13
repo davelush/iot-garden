@@ -4,7 +4,8 @@
     connection: local
     gather_facts: False
     roles:
-      - aws-provision
+      - provision-ec2
+      - provision-dynamodb
 
   - hosts: webservers
     user: ec2-user
