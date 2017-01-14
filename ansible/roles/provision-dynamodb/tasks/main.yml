@@ -1,9 +1,9 @@
 ---
 # file: roles/provision-dynamodb/tasks/main.yml
 
-  # Create dynamo table with hash and range primary key
-  - dynamodb_table:
-      name: my-table
+  - name: Create dynamo table with hash and range primary key
+    dynamodb_table:
+      name: lipo-soc-table
       region: "{{ region }}"
       hash_key_name: id
       hash_key_type: STRING
