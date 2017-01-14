@@ -1,11 +1,11 @@
 ---
 # file: roles/photon-service/tasks/main.yml
 
-#  - name: Install the java 8 jre (DOESN'T WORK BECAUSE OF ELASTIC IP)
-#    yum:
-#      name: java-1.8.0-openjdk
-#      state: present
-#    become: true
+  - name: Install the java 8 jre
+    yum:
+      name: java-1.8.0-openjdk
+      state: present
+    become: true
 
   - name: Copies the systemd service wrapper
     copy:
