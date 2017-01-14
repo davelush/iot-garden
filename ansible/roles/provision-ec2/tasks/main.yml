@@ -25,6 +25,7 @@
     ec2:
       group: "{{ security_group }}"
       instance_type: "{{ instance_type }}"
+      instance_profile_name: "{{ iam_role }}"
       image: "{{ image }}"
       wait: true
       region: "{{ region }}"

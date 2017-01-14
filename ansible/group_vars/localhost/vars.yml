@@ -1,6 +1,7 @@
 ---
 instance_type: t2.micro
 security_group: AppServerGroup
+iam_role: Dynamo-DB-Access
 image: ami-02ace471
 region: eu-west-1
 keypair: ansible
