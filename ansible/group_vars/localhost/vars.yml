@@ -1,0 +1,8 @@
+---
+instance_type: t2.micro
+security_group: AppServerGroup
+image: ami-02ace471
+region: eu-west-1
+keypair: ansible
+count: 1
+elastic_ip: 52.213.130.123

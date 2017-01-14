@@ -1,4 +1,4 @@
----
+#---
 #file: roles/provision-ec2/defaults/main.yml
 #  instance_type: t2.micro
 #  security_group: AppServerGroup  # Change based on your default app server security group
