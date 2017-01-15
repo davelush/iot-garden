@@ -17,7 +17,7 @@
 
     <modules>
         <module>photon-service</module>
-        <!-- <module>ansible</module> -->
+         <module>ansible</module>
     </modules>
 
     <repositories>

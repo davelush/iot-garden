@@ -15,10 +15,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <ansible.playbook>ansible/ec2_launch.yml</ansible.playbook>
+        <ansible.playbook>ansible/site.yml</ansible.playbook>
         <ansible.promoteDebugAsInfo>true</ansible.promoteDebugAsInfo>
-        <ansible.inventory>hosts</ansible.inventory>
-        <!--<ansible.syntaxCheck>true</ansible.syntaxCheck>-->
+        <ansible.inventory>inventory/hosts</ansible.inventory>
+        <ansible.privateKey>${user.home}/.ssh/ansible.pem</ansible.privateKey>
+        <ansible.limit>appservers</ansible.limit>
     </properties>
 
     <dependencies>
