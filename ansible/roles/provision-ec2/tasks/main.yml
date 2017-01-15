@@ -46,7 +46,7 @@
     lineinfile:
       dest: "inventory/hosts"
       insertafter: "[webservers]"
-      line: "\n{{ elastic_ip }}"
+      line: "{{ elastic_ip }}"
     with_items: "{{ ec2.instances }}"
 
   - name: Wait for SSH to come up

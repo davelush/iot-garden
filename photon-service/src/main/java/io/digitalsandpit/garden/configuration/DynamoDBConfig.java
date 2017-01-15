@@ -13,6 +13,8 @@ public class DynamoDBConfig {
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
         AmazonDynamoDB amazonDynamoDB = new AmazonDynamoDBClient();
+        //TODO this shouldn't be hard-coded. Pull out into a configuration file / environment variable
+        amazonDynamoDB.setEndpoint("dynamodb.eu-west-1.amazonaws.com");
         return amazonDynamoDB;
     }
 }
