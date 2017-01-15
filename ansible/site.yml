@@ -1,13 +1,5 @@
 ---
 # file site.yml
-  - hosts: localhost
-    connection: local
-    gather_facts: False
-    roles:
-      - provision-ec2
-      - provision-dynamodb
+  - include: aws-infrastructure.yml
+  - include: appservers.yml
 
-  - hosts: webservers
-    user: ec2-user
-    roles:
-      - photon-service

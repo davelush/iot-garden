@@ -22,6 +22,6 @@ Set-up an Elastic IP for use by ec2 instances (I need to automate this bit at so
 export AWS_ACCESS_KEY_ID='add yours here'
 export AWS_SECRET_ACCESS_KEY='add yours here'
 
-ansible-playbook site.yml --limit localhost  # will provision EC2 infrastructure
-ansible-playbook site.yml --limit webservers # will deploy the application
+ansible-playbook site.yml --limit aws-infrastructure -v # will provision EC2 and Dynamo DB infrastructure
+ansible-playbook site.yml --limit appservers -v # will deploy and start the application
 ```
