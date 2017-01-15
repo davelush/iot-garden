@@ -17,9 +17,9 @@ A few **disclaimers** as I'm still early days;
  
 ### Minimum useful
 
- - Monitor battery charge level
- - Monitor charge in/out flow
- - Log & persist the above to server
+ - ~~Monitor battery charge level~~ (done)
+ - Monitor battery voltage level
+ - ~~Log & persist the above to server~~ (done)
  - Open & close gravity fed sprinkler based on time (hard-coded)
  - Log sprinkler open / closed state
  
