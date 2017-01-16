@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+//TODO don't forget you need to bootstrap cucumber tests
 public class MyStepdefs {
 
     @When("^the (.*) device sends a battery charge level event$")
