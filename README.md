@@ -14,7 +14,19 @@ A few **disclaimers** as I'm still early days;
  - There is some hard-coding in the infrastructure at the moment. Especially around use of elastic IP
  - The webhook from Particle Cloud is manually configured at the moment
  - I've just got the steel thread working, so I'm going to track technical debt via github issues and do some clean-up before I start building out functionality
- 
+
+### How to Run
+
+Clean and build can be achieved with a normal 
+```bash
+mvn clean install
+```
+
+If you want to clean, build and deploy to aws then add an awsdeploy property to trigger the appropriate maven profile. The [README.md](https://github.com/davelush/iot-garden/tree/master/ansible) in the ansible directory gives details on how to automatically provision your aws infrastructure. I don't do this on every single build & deploy because it's stable and I can iterate quicker.
+```bash
+mvn clean install -Dawsdeploy=true
+```
+
 ### Minimum useful
 
  - ~~Monitor battery charge level~~ (done)
@@ -22,6 +34,7 @@ A few **disclaimers** as I'm still early days;
  - ~~Log & persist the above to server~~ (done)
  - Open & close gravity fed sprinkler based on time (hard-coded)
  - Log sprinkler open / closed state
+ - Secure the API calls
  
 ### Wishlist
 
