@@ -5,5 +5,7 @@ I want to know the charge state of the battery
 So that I can tell whether the solar panels are keeping up
 
 Scenario: Photon sends a battery charge level event
-When the wombat_hacker device sends a battery charge level event
-Then the event will be acknowledged as OK
+Given the wombat_hacker device
+  And a battery charge level of 50.2%
+ When a lipo-soc event is sent
+ Then the event will be acknowledged as OK
