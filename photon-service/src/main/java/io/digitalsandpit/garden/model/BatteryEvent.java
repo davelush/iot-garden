@@ -3,7 +3,7 @@ package io.digitalsandpit.garden.model;
 import java.util.Date;
 
 //TODO Battery, Device, Photon and StateOfChargeEvent are currently cruft.
-public class LipoSocEvent {
+public class BatteryEvent {
     private Date timestamp;
     private String coreid;
     private String name;
