@@ -12,19 +12,19 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Date;
 
 @Slf4j
-public class MyStepdefs {
+public class BatteryStepDefs {
 
     private String coreid;
     private double lipoSoc;
 
     @Given("^the (.*) device$")
-    public void the_wombat_hacker_device(String device) throws Throwable {
+    public void the_device_id_device(String device) throws Throwable {
         this.coreid = device;
     }
 
-    @And("^a battery charge level of (\\d+).(\\d+)%$")
-    public void a_battery_charge_level_of_(int major, int minor) throws Throwable {
-        this.lipoSoc = major + (minor / 10);
+    @And("^a battery charge level of (\\d+.\\d+)%$")
+    public void a_battery_charge_level_of_(double value) throws Throwable {
+        this.lipoSoc = value;
     }
 
     @When("^a (.*) event is sent$")
