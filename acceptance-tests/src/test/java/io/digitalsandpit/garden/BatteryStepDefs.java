@@ -1,6 +1,7 @@
 package io.digitalsandpit.garden;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,6 +17,14 @@ public class BatteryStepDefs {
 
     private String coreid;
     private double value;
+    private String photonServer;
+    private String photonPort;
+
+    @Before
+    public void setup() {
+        this.photonServer = System.getProperty("photonServer");
+        this.photonPort = System.getProperty("photonPort");
+    }
 
     @Given("^the (.*) device$")
     public void the_device_id_device(String device) throws Throwable {
@@ -42,8 +51,7 @@ public class BatteryStepDefs {
         event.setCoreid(this.coreid);
         event.setData(this.value);
 
-        //TODO account for different environments
-        restTemplate.postForObject("http://garden.digitalsandpit.io:8080/v1/"+name, event, BatteryEvent.class);
+        restTemplate.postForObject("http://"+photonServer+":"+photonPort+"/v1/"+name, event, BatteryEvent.class);
     }
 
     @Then("^the event will be acknowledged as (.*)$")
