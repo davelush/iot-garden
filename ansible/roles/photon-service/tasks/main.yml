@@ -47,3 +47,9 @@
       name: PhotonService
       state: started
     become: true
+
+  - name: Wait for the service to come up on port 8080
+    wait_for:
+      host: "{{ inventory_hostname }}"
+      port: 8080
+      delay: 10
